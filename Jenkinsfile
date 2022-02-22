@@ -6,11 +6,12 @@ pipeline {
     stages {
 
         stage('Build'){
-            def mvnhome=tool name: '', type: 'maven'
-            sh "${mvnHome}/bin/mvn package
+            
+//             bat "${mvnHome}/bin/mvn package
             steps {
                 // for prod env
-                 bat "mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
+                def mvnhome=tool name: '', type: 'maven'
+                 bat "${mvnHome}/bin/mvn  -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
                 // for dev env
                 // bat "mvn clean install -DskipTests -P dev"
             }
