@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // for prod env
                 def mvnhome=tool name: '', type: 'maven'
-                 bat "${mvnHome}/bin/mvn  -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
+                 bat " C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2021.3.1\\plugins\\maven\\lib\\maven3\\bin\\mvn  -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
                 // for dev env
                 // bat "mvn clean install -DskipTests -P dev"
             }
