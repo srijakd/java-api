@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                   bat "java -cp C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\example\java-api\1.0-SNAPSHOT\java-api-1.0-SNAPSHOT.jar"
+                   bat "java -cp C:\\WINDOWS\\system32\\config\\systemprofile\\.m2\\repository\\org\\example\\java-api\\1.0-SNAPSHOT\\java-api-1.0-SNAPSHOT.jar"
             }
         }
     }
